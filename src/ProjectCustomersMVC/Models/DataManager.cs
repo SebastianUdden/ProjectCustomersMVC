@@ -7,5 +7,11 @@ namespace ProjectCustomersMVC.Models
 {
     public class DataManager
     {
+        CustomerContext context;
+
+        public DataManager(CustomerContext context)
+        {
+            this.context;
+        }
     }
 }
