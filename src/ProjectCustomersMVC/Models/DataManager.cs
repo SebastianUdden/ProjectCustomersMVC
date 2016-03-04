@@ -8,15 +8,33 @@ namespace ProjectCustomersMVC.Models
 {
     public class DataManager
     {
-        CustomerContext context;
+        List<Customer> customers = new List<Customer>();
+        //CustomerContext context;
 
-        public DataManager(CustomerContext context)
+        public void AddCustomer()
         {
-            this.context = context;
+            var customer = new Customer();
+            customer.Id = 1;
+            customer.Name = "Sebastian";
+            customer.Email = "sebbe_u@hotmail.com";
+
+            var customer2 = new Customer();
+            customer.Id = 2;
+            customer.Name = "Linus";
+            customer.Email = "lijoen@gmail.com";
+
+            customers.Add(customer);
+            customers.Add(customer2);
         }
+
+        //public DataManager(CustomerContext context)
+        //{
+        //    this.context = context;
+        //}
         public List<CustomerVM> ListCustomers()
         {
-            return context.Customers
+            AddCustomer();
+            return customers
                 .OrderBy(o => o.Name)
                 .Select(o => new CustomerVM
                 {

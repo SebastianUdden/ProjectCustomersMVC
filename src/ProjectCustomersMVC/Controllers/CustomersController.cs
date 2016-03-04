@@ -11,17 +11,17 @@ namespace ProjectCustomersMVC.Controllers
 {
     public class CustomersController : Controller
     {
-        DataManager datamanager;
-        CustomerContext context;
-        public CustomersController(CustomerContext context)
-        {
-            this.context = context;
-            datamanager = new DataManager(context);
-        }
+        //DataManager datamanager;
+        //CustomerContext context;
+        //public CustomersController(CustomerContext context)
+        //{
+        //    this.context = context;
+        //    datamanager = new DataManager(context);
+        //}
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var dataManager = new DataManager(context);
+            var dataManager = new DataManager();
             var model = dataManager.ListCustomers();
             return View(model);
         }
