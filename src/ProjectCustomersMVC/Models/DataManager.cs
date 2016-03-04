@@ -11,7 +11,7 @@ namespace ProjectCustomersMVC.Models
 
         public DataManager(CustomerContext context)
         {
-            this.context;
+            //this.context;
         }
     }
 }
