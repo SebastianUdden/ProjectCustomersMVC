@@ -12,7 +12,7 @@ namespace ProjectCustomersMVC.Models
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Customer>().ToTable('Customers');
+            //modelBuilder.Entity<Customer>().ToTable('Customers');
         }
     }
 
